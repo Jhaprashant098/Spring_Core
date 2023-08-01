@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd ">
+
+
+<bean class="com.springCore.ci.Certi" name="cer" c:name="Phython is good programmimg language">
+
+
+<!-- <constructor-arg value="Android Using By Prashant"/> -->
+</bean>
+
+<bean class="com.springCore.ci.Person" name="person">
+
+
+  <constructor-arg value="Prashant"/>
+
+<!--  reduce ambiguity problem using type  -->
+
+<constructor-arg value="21" type="int"/>
+<constructor-arg ref="cer"/>  
+<constructor-arg name="phones">
+<list>
+<value>4567867</value>
+<value>578876</value>
+</list>
+</constructor-arg>
+</bean>
+
+<bean class="com.springCore.ci.Adition" name="add">
+<constructor-arg value="12" type="double"/>
+<constructor-arg value="32" type="double"/>
+</bean>
+
+
+		
+</beans>
